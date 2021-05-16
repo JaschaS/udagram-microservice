@@ -14,7 +14,7 @@ import { V0MODELS } from './controllers/v0/model.index';
 
   const app = express();
   app.use(cors());
-  const port = process.env.PORT || 8080; // default port to listen
+  const port = process.env.PORT || 8082; // default port to listen
   
   app.use(bodyParser.json());
 
