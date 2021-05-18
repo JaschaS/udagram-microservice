@@ -1,12 +1,12 @@
 #!/bin/bash
 cd udagram-feed
 
-docker build \
---build-arg username=$1 \
---build-arg password=$2 \
---build-arg database=$3 \
---build-arg host=$4 \
---build-arg aws_region=$5 \
---build-arg aws_profile=$6 \
---build-arg aws_media_bucket=$7 \
+docker build -t $1/udagram:feed \
+--build-arg username=$2 \
+--build-arg password=$3 \
+--build-arg database=$4 \
+--build-arg host=$5 \
+--build-arg aws_region=$6 \
+--build-arg aws_profile=$7 \
+--build-arg aws_media_bucket=$8 \
 .
