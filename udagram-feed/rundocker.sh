@@ -1,0 +1,17 @@
+#!/bin/bash
+
+source ~/.profile
+
+echo $1
+
+docker run \
+-p 49160:8080 \
+--env POSTGRES_USERNAME=$POSTGRES_USERNAME \
+--env POSTGRES_PASSWORD=$POSTGRES_PASSWORD \
+--env POSTGRES_DB=$POSTGRES_DB \
+--env POSTGRES_HOST=$POSTGRES_HOST \
+--env S3_REGION=$S3_REGION \
+--env AWS_PROFILE=$AWS_PROFILE \
+--env S3_BUCKET=$S3_BUCKET \
+--env PORT=8080 \
+test

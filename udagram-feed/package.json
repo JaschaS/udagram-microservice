@@ -2,10 +2,10 @@
   "name": "udacity-c2-restapi",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "./www/server.js",
   "scripts": {
     "bcrypt": "npm install bcrypt",
-    "start": "npm run bcrypt && node .",
+    "start": "node .",
     "tsc": "tsc",
     "dev": "ts-node-dev ./src/server.ts",
     "prod": "tsc && node ./www/server.js",

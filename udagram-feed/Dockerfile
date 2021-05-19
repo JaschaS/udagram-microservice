@@ -10,8 +10,8 @@ RUN mkdir src
 COPY src/ ./src
 
 RUN npm install
+RUN npm run tsc
 
 EXPOSE 8080
 
-# Define Docker’s behavior when the image is run
-CMD [ "npm", "run", "prod" ]
+CMD [ "npm", "start" ]
