@@ -13,9 +13,7 @@ install:
 before_script:
   - echo "no tests"
 
-#- docker build -t udagram-feed --build-arg username="$POSTGRES_USERNAME" --build-arg password="$POSTGRES_PASSWORD" --build-arg database="$POSTGRES_DB" --build-arg host="$POSTGRES_HOST" --build-arg aws_region="$S3_REGION" --build-arg aws_profile="$AWS_PROFILE" --build-arg aws_media_bucket="$S3_BUCKET" .
-script: bash travis_script.sh "$DOCKER_USERNAME" "$POSTGRES_USERNAME" "$POSTGRES_PASSWORD" "$POSTGRES_DB" "$POSTGRES_HOST" "$S3_REGION" "$AWS_PROFILE" "$S3_BUCKET"  
-#  - docker tag udagram-feed "$DOCKER_USERNAME"/udagram:feed
+script: bash travis_script.sh "$DOCKER_USERNAME"
 
 # Tasks to perform after the process is successful. Formatting the Docker username and password as below enables you to programmatically log in without having the password exposed in logs.
 after_success:

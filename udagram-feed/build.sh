@@ -1,5 +1,5 @@
 #!/bin/bash
-docker build \
+docker build -t pdfwe3/udagram:feed \
 --build-arg username=$POSTGRES_USERNAME \
 --build-arg password=$POSTGRES_PASSWORD \
 --build-arg database=$POSTGRES_DB \
