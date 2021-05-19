@@ -1,7 +1,7 @@
 #!/bin/bash
 cd udagram-feed
 
-docker build -t $1/udagram-feed:version1 .
+docker build -t $1/udagram-feed:version2 .
 
 cd ..
 
