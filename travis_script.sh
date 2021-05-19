@@ -1,10 +1,10 @@
 #!/bin/bash
 cd udagram-feed
 
-docker build -t $1/udagram:feed .
+docker build -t $1/udagram-feed:version1 .
 
 cd ..
 
 cd udagram-user
 
-docker build -t $1/udagram:user .
+docker build -t $1/udagram-user:version1 .
