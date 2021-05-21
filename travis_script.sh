@@ -7,4 +7,4 @@ cd ..
 
 cd udagram-user
 
-docker build -t $1/udagram-user:version1 .
+docker build -t $1/udagram-user:version2 .
