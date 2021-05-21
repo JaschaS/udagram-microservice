@@ -24,7 +24,7 @@ spec:
         service: udagram-frontend
     spec:
       containers:
-      - image: pdfwe3/udagram-frontend:version1
+      - image: pdfwe3/udagram-frontend:version2
         env:
         - name: PROXY_URL
           value: "http://udagram-proxy-svc:8080"
