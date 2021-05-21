@@ -45,3 +45,5 @@ venv/
 !.elasticbeanstalk/*.global.yml
 
 set_env.sh
+
+*_env.yml
