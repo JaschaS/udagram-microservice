@@ -24,7 +24,7 @@ spec:
         service: udagram-proxy
     spec:
       containers:
-      - image: pdfwe3/udagram-proxy:version1
+      - image: pdfwe3/udagram-proxy:version2
         imagePullPolicy: Always
         name: udagram-proxy
         ports:
