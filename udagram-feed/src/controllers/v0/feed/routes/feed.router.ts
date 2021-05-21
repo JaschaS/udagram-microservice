@@ -7,6 +7,9 @@ const router: Router = Router();
 
 // Get all feed items
 router.get('/', async (req: Request, res: Response) => {
+
+    console.log(new Date().toLocaleString() + ": requesting all feeds");
+
     const items = await FeedItem.findAndCountAll({order: [['id', 'DESC']]});
     items.rows.map((item) => {
             if(item.url) {
@@ -23,8 +26,16 @@ router.get('/', async (req: Request, res: Response) => {
 router.patch('/:id', 
     requireAuth, 
     async (req: Request, res: Response) => {
-        //@TODO try it yourself
-        res.send(500).send("not implemented")
+
+        let { id } = req.params;
+        console.log(new Date().toLocaleString() + `: requesting feed for id ${id}`);
+
+        const feed = await FeedItem.findById(id);
+        if(feed.url) {
+            feed.url = AWS.getGetSignedUrl(feed.url);
+        }
+
+        res.send(feed);
 });
 
 
