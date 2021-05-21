@@ -1,0 +1,29 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  labels:
+    service: udagram-proxy
+  name: udagram-proxy
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        service: udagram-proxy
+    spec:
+      containers:
+      - image: pdfwe3/udagram-proxy:version1
+        name: udagram-proxy
+        imagePullPolicy: Always          
+        resources:
+          requests:
+            memory: "64Mi"
+            cpu: "250m"
+          limits:
+            memory: "1024Mi"
+            cpu: "500m"       
+        ports:
+        - containerPort: 8080
+      restartPolicy: Always
+
+
