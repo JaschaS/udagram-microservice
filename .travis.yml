@@ -19,4 +19,4 @@ script: bash travis_script.sh "$DOCKER_USERNAME"
 after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
   - docker push "$DOCKER_USERNAME"/udagram-feed:version2
-  - docker push "$DOCKER_USERNAME"/udagram-user:version1
+  - docker push "$DOCKER_USERNAME"/udagram-user:version2
