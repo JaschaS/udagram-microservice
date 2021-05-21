@@ -46,4 +46,4 @@ venv/
 
 set_env.sh
 
-*_env.yml
+*_env.yaml
