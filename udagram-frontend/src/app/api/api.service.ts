@@ -1,8 +1,9 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders, HttpRequest, HttpEvent } from '@angular/common/http';
+import { environment } from '../../environments/environment';
 import { map } from 'rxjs/operators';
 
-const API_HOST = process.env.PROXY_URL;
+const API_HOST = environment.apiHost;
 
 @Injectable({
   providedIn: 'root'
