@@ -12,3 +12,7 @@ docker build -t $1/udagram-user:version2 .
 cd udagram-frontend
 
 docker build -t $1/udagram-frontend:version1 .
+
+cd udagram-proxy
+
+docker build -t $1/udagram-proxy:version1 .

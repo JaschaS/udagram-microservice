@@ -21,3 +21,4 @@ after_success:
   - docker push "$DOCKER_USERNAME"/udagram-feed:version2
   - docker push "$DOCKER_USERNAME"/udagram-user:version2
   - docker push "$DOCKER_USERNAME"/udagram-frontend:version1
+  - docker push "$DOCKER_USERNAME"/udagram-proxy:version1
