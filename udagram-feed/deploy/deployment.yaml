@@ -1,0 +1,65 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    service: udagram-feed
+  name: udagram-feed
+spec:
+  progressDeadlineSeconds: 2147483647
+  replicas: 1
+  revisionHistoryLimit: 2147483647
+  selector:
+    matchLabels:
+      service: udagram-feed
+  strategy:
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 1
+    type: RollingUpdate
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        service: udagram-feed
+    spec:
+      containers:
+      - image: pdfwe3/udagram-feed:version3
+        env:
+        - name: POSTGRES_USERNAME
+          value: 
+        - name: POSTGRES_PASSWORD
+          value: 
+        - name: POSTGRES_DB
+          value: 
+        - name: POSTGRES_HOST
+          value: 
+        - name: S3_REGION
+          value: "us-east-1"
+        - name: S3_BUCKET
+          value: 
+        - name: AWS_PROFILE
+          value: "default"
+        - name: JWT_KEY
+          value: 
+        - name: PORT
+          value: "8080"
+        imagePullPolicy: Always
+        name: udagram-feed
+        ports:
+        - containerPort: 8080
+          protocol: TCP
+        resources:
+          limits:
+            cpu: 500m
+            memory: 1Gi
+          requests:
+            cpu: 500m
+            memory: 1Gi
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+      dnsPolicy: ClusterFirst
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      securityContext: {}
+      terminationGracePeriodSeconds: 30
