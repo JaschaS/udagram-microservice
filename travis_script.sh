@@ -17,6 +17,6 @@ docker build -t $1/udagram-frontend:version2 .
 
 cd ..
 
-cd udagram-proxy
+cd reverse-proxy
 
 docker build -t $1/udagram-proxy:version2 .
