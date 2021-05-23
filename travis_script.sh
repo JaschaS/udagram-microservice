@@ -13,7 +13,7 @@ cd ..
 
 cd udagram-frontend
 
-docker build -t $1/udagram-frontend:version2 .
+docker build -t $1/udagram-frontend:version3 .
 
 cd ..
 
