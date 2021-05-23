@@ -4,6 +4,10 @@ metadata:
   labels:
     service: udagram-frontend
   name: udagram-frontend-svc
+  annotations:
+    service.beta.kubernetes.io/aws-load-balancer-type: external
+    service.beta.kubernetes.io/aws-load-balancer-nlb-target-type: ip
+    service.beta.kubernetes.io/aws-load-balancer-scheme: internet-facing
 spec:
   ports:
   - name: "8080"
@@ -11,3 +15,4 @@ spec:
     targetPort: 8080
   selector:
     service: udagram-frontend
+  type: LoadBalancer
