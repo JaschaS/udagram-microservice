@@ -15,4 +15,3 @@ spec:
     targetPort: 8080
   selector:
     service: udagram-frontend
-  type: LoadBalancer
