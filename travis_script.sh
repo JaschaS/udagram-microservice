@@ -13,10 +13,10 @@ cd ..
 
 cd udagram-frontend
 
-docker build -t $1/udagram-frontend:version7 .
+docker build -t $1/udagram-frontend:version8 .
 
 cd ..
 
 cd reverse-proxy
 
-docker build -t $1/udagram-proxy:version2 .
+docker build -t $1/udagram-proxy:version3 .
