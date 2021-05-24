@@ -15,6 +15,6 @@ COPY src/ ./src
 RUN npm install
 run npm run build
 
-EXPOSE 8080
+EXPOSE 4200
 
 CMD [ "npm", "run", "start" ]
